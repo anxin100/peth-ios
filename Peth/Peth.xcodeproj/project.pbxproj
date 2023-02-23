@@ -11,6 +11,11 @@
 		E199107F29A73E5F0062C20B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199107E29A73E5F0062C20B /* ContentView.swift */; };
 		E199108129A73E610062C20B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E199108029A73E610062C20B /* Assets.xcassets */; };
 		E199108429A73E610062C20B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E199108329A73E610062C20B /* Preview Assets.xcassets */; };
+		E199109029A741090062C20B /* KeyChainFlowContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199108B29A741080062C20B /* KeyChainFlowContext.swift */; };
+		E199109129A741090062C20B /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199108D29A741090062C20B /* RNCryptor.swift */; };
+		E199109229A741090062C20B /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199108F29A741090062C20B /* KeyChainStorage.swift */; };
+		E199109529A741260062C20B /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E199109429A741260062C20B /* KeychainSwift */; };
+		E199109829A741430062C20B /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = E199109729A741430062C20B /* web3swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		E199107E29A73E5F0062C20B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E199108029A73E610062C20B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E199108329A73E610062C20B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E199108B29A741080062C20B /* KeyChainFlowContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainFlowContext.swift; sourceTree = "<group>"; };
+		E199108D29A741090062C20B /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
+		E199108F29A741090062C20B /* KeyChainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E199109529A741260062C20B /* KeychainSwift in Frameworks */,
+				E199109829A741430062C20B /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,9 @@
 		E199107B29A73E5F0062C20B /* Peth */ = {
 			isa = PBXGroup;
 			children = (
+				E199108A29A741080062C20B /* FlowContexts */,
+				E199108C29A741090062C20B /* Sources */,
+				E199108E29A741090062C20B /* Storage */,
 				E199107C29A73E5F0062C20B /* PethApp.swift */,
 				E199107E29A73E5F0062C20B /* ContentView.swift */,
 				E199108029A73E610062C20B /* Assets.xcassets */,
@@ -65,6 +78,30 @@
 				E199108329A73E610062C20B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E199108A29A741080062C20B /* FlowContexts */ = {
+			isa = PBXGroup;
+			children = (
+				E199108B29A741080062C20B /* KeyChainFlowContext.swift */,
+			);
+			path = FlowContexts;
+			sourceTree = "<group>";
+		};
+		E199108C29A741090062C20B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E199108D29A741090062C20B /* RNCryptor.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E199108E29A741090062C20B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E199108F29A741090062C20B /* KeyChainStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,10 @@
 			dependencies = (
 			);
 			name = Peth;
+			packageProductDependencies = (
+				E199109429A741260062C20B /* KeychainSwift */,
+				E199109729A741430062C20B /* web3swift */,
+			);
 			productName = Peth;
 			productReference = E199107929A73E5F0062C20B /* Peth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,10 @@
 				Base,
 			);
 			mainGroup = E199107029A73E5F0062C20B;
+			packageReferences = (
+				E199109329A741260062C20B /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				E199109629A741430062C20B /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = E199107A29A73E5F0062C20B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E199109229A741090062C20B /* KeyChainStorage.swift in Sources */,
 				E199107F29A73E5F0062C20B /* ContentView.swift in Sources */,
+				E199109129A741090062C20B /* RNCryptor.swift in Sources */,
 				E199107D29A73E5F0062C20B /* PethApp.swift in Sources */,
+				E199109029A741090062C20B /* KeyChainFlowContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +387,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E199109329A741260062C20B /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		E199109629A741430062C20B /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/web3swift-team/web3swift.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E199109429A741260062C20B /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E199109329A741260062C20B /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		E199109729A741430062C20B /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E199109629A741430062C20B /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E199107129A73E5F0062C20B /* Project object */;
 }
